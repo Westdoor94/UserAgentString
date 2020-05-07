@@ -3,7 +3,6 @@
 import requests
 from lxml import etree
 import pandas
-from concurrent.futures import ThreadPoolExecutor
 
 class GetUserAgent(object):
 
@@ -12,7 +11,6 @@ class GetUserAgent(object):
 
 		super(GetUserAgent, self).__init__()
 
-		self.executor = ThreadPoolExecutor(max_workers = 3)
 		self.headers = {'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.122 Safari/537.36',
            				'Accept':'application/json, text/javascript, */*; q=0.01'}
 		self.url = url
